@@ -39,7 +39,7 @@ const httpChecks = {
 }
 
 export default function () {
-  const frontpage = http.get("https://skovvart.dk/");
+  const frontpage = http.get("https://www.skovvart.dk/");
   frontpageSuccessRate.add(check(frontpage, httpChecks));
   frontpageDurationTrend.add(frontpage.timings.duration);
 
@@ -47,8 +47,8 @@ export default function () {
 
   const responses = http.batch(
     {
-      "Blog post": "https://skovvart.dk/blog/how-is-sapper-different-from-next/",
-      "Non-existing page": "https://skovvart.dk/404-error-page-does-not-exist"
+      "Blog post": "https://www.skovvart.dk/blog/how-is-sapper-different-from-next/",
+      "Non-existing page": "https://www.skovvart.dk/404-error-page-does-not-exist"
     }
   );
   check(responses["Blog post"], httpChecks);
