@@ -1,0 +1,19 @@
+{
+  "name": "loadtest",
+  "version": "1.0.0",
+  "description": "Sample K6 load test",
+  "main": "loadtest.js",
+  "scripts": {
+    "test": "docker build . -t loadtest:latest && docker run loadtest"
+  },
+  "keywords": [
+    "K6",
+    "load",
+    "test"
+  ],
+  "author": "NSK",
+  "license": "ISC",
+  "devDependencies": {
+    "k6": "0.0.0"
+  }
+}
